@@ -25,6 +25,7 @@
 *************************************/
 
 .game-container {
+  
   height: 85vh;
   margin: auto;
   padding: 1rem;
@@ -66,6 +67,9 @@
 @media all and (min-width: 768px) {
   .home-container img {
 }
+  .game-container {
+    max-width: 750px;
+  }
 
 @media all and (min-width: 992px) {
   .home-container img{

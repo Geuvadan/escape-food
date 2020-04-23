@@ -29,7 +29,6 @@ const introHTML = `
 
 const printIntro = () => {
   const mainContainer = document.getElementById('main');
-  console.log(mainContainer);
   mainContainer.innerHTML = introHTML;
 };
 
