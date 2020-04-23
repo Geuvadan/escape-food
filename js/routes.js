@@ -1,8 +1,12 @@
 import printHome from './home.js';
+import printIntro from './intro.js';
 
 page('/', () => {
-  console.log('hoola');
   printHome();
+});
+
+page('/intro', () => {
+  printIntro();
 });
 
 page();

@@ -1,9 +1,13 @@
+/*************************************
+    HOME
+*************************************/
+
 .home-container {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  width: 100%;
+  height: calc(95vh - 80px);
+  overflow: scroll;
 }
 
 .home-container img {
@@ -17,29 +21,49 @@
 }
 
 /*************************************
+    COMMON GAME
+*************************************/
+
+.game-container {
+  height: 85vh;
+  margin: auto;
+  padding: 1rem;
+}
+
+/*************************************
+    INTRO
+*************************************/
+
+.intro {
+  text-align: center;
+  padding: 1rem 1rem;
+  margin: 1rem;
+  background-color: #ffffff;
+}
+
+/*************************************
     MEDIA QUERIES
 *************************************/
 
 @media all and (min-width: 480px) {
-  .home-container {
+  .home-container img {
     max-width: 80%;
+  }
+  .intro {
+    width: 80%;
+    margin: auto;
   }
 }
 
 @media all and (min-width: 768px) {
   .home-container img {
-    max-width: 768px;
-  }
 }
 
 @media all and (min-width: 992px) {
-  .home-container {
-    max-width: 992px;
-  }
+  .home-container img{
+    max-width: 70%;
 }
 
 @media all and (min-width: 1200px) {
   .home-container {
-    max-width: 1200px;
-  }
 }

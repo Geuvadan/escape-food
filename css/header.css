@@ -1,6 +1,6 @@
 .header {
   background-color: #fafafa;
-  height: 10vh;
+  height: 80px;
 }
 
 .logo-container {
@@ -11,5 +11,4 @@
 
 .logo-container > img {
   max-width: 200px;
-  padding: 1rem;
 }
