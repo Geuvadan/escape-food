@@ -49,6 +49,31 @@
   line-height: 2rem;
 }
 
+.size-radio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: .5rem;
+}
+
+.img-option {
+  display: grid;
+  justify-content: center;
+}
+
+.size-radio label {
+  text-align: center;
+  display: grid;
+}
+.size-radio input[type=radio] {
+  display: none;
+}
+.size-radio input[type=radio]:checked ~ img {
+    border: 2px solid #2ca6c3;
+}
+
+
+
 
 /*************************************
     MEDIA QUERIES
@@ -70,6 +95,10 @@
   .game-container {
     max-width: 750px;
   }
+
+  .size-radio {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 
 @media all and (min-width: 992px) {
   .home-container img{

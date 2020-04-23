@@ -1,3 +1,7 @@
+import storage from './storage.js';
+
+const { setItem, getItem } = storage('lStorage');
+
 const introHTML = `
     <div class="game-container">
       <section class="section-area">
@@ -11,16 +15,38 @@ const introHTML = `
         <form>
           <fieldset>
             <label for="name">Nombre de tu perro</label>
-            <input type="text" name="name" id="name" placeholder="Frankie"/>
+            <input type="text" name="name" id="nameInput" placeholder="Frankie" required/>
           </fieldset>
           <fieldset>
-          <label for="size">Tamaño</label>
-            <input type="radio" name="size" id="xs" value="xs" />
-            <input type="radio" name="size" id="m" value="m" />
-            <input type="radio" name="size" id="l" value="l" />
-            <input type="radio" name="size" id="xl" value="xl" />
+            <label for="size">Tamaño</label>
+            <div class="size-radio">
+              <div class="img-option">
+                <label for="xs">
+                  <input type="radio" name="size" id="xs" value="xs" required/>
+                  <img src="../img/size-xs.png" alt="size xs" />XS</label>
+                
+              </div>
+              <div class="img-option">
+                <label for="m">
+                  <input type="radio" name="size" id="m" value="m" required/>
+                  <img src="../img/size-m.png" alt="size m" />M</label>
+                
+              </div>
+              <div class="img-option">
+                <label for="l">
+                  <input type="radio" name="size" id="l" value="l" required/>
+                  <img src="../img/size-l.png" alt="size l" />L</label>
+                
+              </div>
+              <div class="img-option">
+                <label for="xl">
+                  <input type="radio" name="size" id="xl" value="xl" required/>
+                  <img src="../img/size-xl.png" alt="size xl" />XL</label>
+                
+              </div>
+            </div>
           </fieldset>
-          <button class="primary-btn" type="submit">Crear</button>
+          <button id="pjBtn" class="primary-btn" type="submit">Crear</button>
         </form>
       </section>
       
@@ -30,6 +56,17 @@ const introHTML = `
 const printIntro = () => {
   const mainContainer = document.getElementById('main');
   mainContainer.innerHTML = introHTML;
+
+  const btn = document.getElementById('pjBtn');
+  btn.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    const name = document.getElementById('nameInput').value;
+    const size = document.querySelector('input[name="size"]:checked').value;
+    setItem('name', name);
+    setItem('size', size);
+    console.log(name, size);
+    page('/inicio');
+  });
 };
 
 export default printIntro;
