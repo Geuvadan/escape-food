@@ -8,7 +8,7 @@ const homeHTML = `
       </section>
       <section class="home-call">
         <h3><em>¿Serás capaz de resolverlo?</em></h3>
-        <button class="primary-btn">jugar</button>
+        <button id="play-btn" class="primary-btn">jugar</button>
       </section>
     </div>
   `;
@@ -17,6 +17,11 @@ const printHome = () => {
   const mainContainer = document.getElementById('main');
   console.log(mainContainer);
   mainContainer.innerHTML = homeHTML;
+  const playBtn = document.getElementById('play-btn');
+  playBtn.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    location.href = '/intro';
+  });
 };
 
 export default printHome;

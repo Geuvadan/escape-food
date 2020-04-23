@@ -1,0 +1,7 @@
+.footer {
+  min-height: 5vh;
+  background-color: #222222;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}

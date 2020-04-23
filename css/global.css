@@ -36,10 +36,13 @@ h3 {
   padding: 0.3rem 1rem;
   font-weight: normal;
   border: 0px;
+  cursor: pointer;
 }
 
 .main-section {
   width: 100%;
   background-color: #ffffff;
   padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
 }
