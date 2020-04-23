@@ -20,20 +20,45 @@ h2 {
 }
 
 h3 {
-  color: #333333;
+  color: #2ca6c3;
   font-weight: 500;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  color: #2ca6c3;
+  text-align: left;
+}
+
+input[type='text'] {
+  display: block;
+  width: 100%;
+  line-height: 1.7rem;
+  background-color: #fafafa;
+  box-shadow: none;
+  border-radius: 5px;
+  border: 1px solid #d1dbe0;
+  padding: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .primary-btn {
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 1.2rem;
   background-color: #2ca6c3;
   border-radius: 5px;
-  text-transform: uppercase;
   color: white;
   line-height: 1.7rem;
   padding: 0.3rem 1rem;
-  font-weight: normal;
+
   border: 0px;
   cursor: pointer;
 }

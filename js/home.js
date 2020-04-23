@@ -7,7 +7,7 @@ const homeHTML = `
         <img src="./img/home-subtitle.png" alt="En busca de la receta perfecta" />
       </section>
       <section class="home-call">
-        <h3><em>¿Serás capaz de resolverlo?</em></h3>
+        <h2><em>¿Serás capaz de resolverlo?</em></h2>
         <a id="play-btn" class="primary-btn" href="/intro">jugar</a>
       </section>
     </div>

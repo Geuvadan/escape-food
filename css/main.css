@@ -28,18 +28,26 @@
   height: 85vh;
   margin: auto;
   padding: 1rem;
+  overflow: scroll;
 }
+
+.section-area {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #ffffff;
+}
+
+
 
 /*************************************
     INTRO
 *************************************/
 
-.intro {
-  text-align: center;
-  padding: 1rem 1rem;
-  margin: 1rem;
-  background-color: #ffffff;
+.form-section {
+  line-height: 2rem;
 }
+
 
 /*************************************
     MEDIA QUERIES
@@ -65,5 +73,6 @@
 }
 
 @media all and (min-width: 1200px) {
-  .home-container {
+  .home-container img{
+    max-width: 800px;
 }
