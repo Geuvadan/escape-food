@@ -1,16 +1,16 @@
 import printHome from './home.js';
 import printIntro from './intro.js';
-import printInicio from './01-inicio.js';
+import printInicio from './game00.js';
 
 page('/', () => {
   printHome();
 });
 
-page('/intro', async () => {
-  await printIntro();
+page('/intro', () => {
+  printIntro();
 });
 
-page('/inicio', () => {
+page('/game00', () => {
   printInicio();
 });
 

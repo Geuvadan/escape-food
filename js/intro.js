@@ -65,7 +65,7 @@ const printIntro = () => {
     setItem('name', name);
     setItem('size', size);
     console.log(name, size);
-    page('/inicio');
+    page('/game00');
   });
 };
 
