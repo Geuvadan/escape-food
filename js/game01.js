@@ -17,23 +17,74 @@ const game01HTML = (name) => `
       </section>
 
       <setion class="mosaic">
-        <div class="mosaic-cell cell-1"><img src="./img/mosaic/Foto-1.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-2"><img src="./img/mosaic/Foto-2.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-3"><img src="./img/mosaic/Foto-3.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-4"><img src="./img/mosaic/Foto-4.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-5"><img src="./img/mosaic/Foto-5.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-6"><img src="./img/mosaic/Foto-6.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-7"><img src="./img/mosaic/Foto-7.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-8"><img src="./img/mosaic/Foto-8.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-9"><img src="./img/mosaic/Foto-9.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-10"><img src="./img/mosaic/Foto-10.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-11"><img src="./img/mosaic/Foto-11.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-12"><img src="./img/mosaic/Foto-12.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-13"><img src="./img/mosaic/Foto-13.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-14"><img src="./img/mosaic/Foto-14.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-15"><img src="./img/mosaic/Foto-15.png" alt="imagen mosaico" /></div>
-        <div class="mosaic-cell cell-16"><img src="./img/mosaic/Foto-16.png" alt="imagen mosaico" /></div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-1-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-1.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-2-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-2.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-3-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-3.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-4-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-4.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-5-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-5.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-6-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-6.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-7-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-7.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-8-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-8.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-9-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-9.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-10-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-10.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-11-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-11.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-12-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-12.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-13-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-13.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-14-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-14.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-15-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-15.png" alt="imagen mosaico" /></div>
+        </div>
+        <div class="mosaic-cell">
+          <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-16-2.png" alt="imagen mosaico" /></div>
+          <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-16.png" alt="imagen mosaico" /></div>
+        </div>
+        
       </setion>
+
+  
       
       <section class="navigation">
         <button id="back-btn" class="primary-btn">Volver</button>
@@ -48,8 +99,12 @@ const printGame01 = () => {
   const mainContainer = document.getElementById('main');
   mainContainer.innerHTML = game01HTML(name);
 
-  const numMosaicCells = document.querySelectorAll('.mosaic-cell').length;
-  console.log(numMosaicCells);
+  const mosaicCells = document.querySelectorAll('.mosaic-cell');
+  mosaicCells.forEach((mosaicCell) => {
+    mosaicCell.addEventListener('click', () => {
+      mosaicCell.classList.toggle('is-flipped');
+    });
+  });
 
   const nextBtn = document.getElementById('next-btn');
   nextBtn.addEventListener('click', (evt) => {

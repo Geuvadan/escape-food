@@ -91,6 +91,12 @@ const game02HTML = (name) => `
         <input type="text" id="cell-64" class="input-letter cell-64" maxlength="1">
       </section>
 
+      <section class="section-area">
+        <p> Solución: </p>
+        <input type="text" id="solution" class="solution-input blue" >
+        <p id="error" class="error hide">Ups! Parece que la respuesta no es correcta.</p>
+      </section>
+
       
       <section class="navigation">
         <button id="back-btn" class="primary-btn">Volver</button>
@@ -106,9 +112,14 @@ const printGame02 = () => {
   mainContainer.innerHTML = game02HTML(name);
 
   const nextBtn = document.getElementById('next-btn');
-  nextBtn.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    page('/game03');
+  nextBtn.addEventListener('click', () => {
+    const solution = document.getElementById('solution').value.toUpperCase();
+    if (solution === 'INGREDIENTES') {
+      page('/game03');
+    } else {
+      const err = document.querySelector('.error');
+      err.classList.remove('hide');
+    }
   });
 
   const backBtn = document.getElementById('back-btn');

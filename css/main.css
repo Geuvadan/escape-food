@@ -38,6 +38,12 @@
   background-color: #ffffff;
 }
 
+.section-area > .solution-input {
+  width: 10rem;
+  text-align: center;
+  margin: auto;
+}
+
 /*************************************
     INTRO
 *************************************/
@@ -77,11 +83,29 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
+  gap: 0.3rem;
   margin-bottom: 3rem;
 }
 
 .mosaic-cell {
-  padding: 0 0.3rem;
+  position: relative;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.mosaic-card-1 {
+  transform: rotateY(180deg);
+}
+
+.mosaic-card-2 {
+  position: absolute;
+  top: 0;
+  backface-visibility: hidden;
+}
+
+.is-flipped {
+  transform: rotateY(180deg);
 }
 
 .mosaic-cell img {
