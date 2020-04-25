@@ -5,24 +5,22 @@ const game02HTML = (name) => `
       <section class="section-area">
         <h3>CRUCIGRAMA</h3>
         <p class="story-p">
-          “¿Comida casera? ¿Van a cocinar para mí? ¿Será ese el gran misterio?”
+          “¿Comida casera? ¿Van a cocinar para mí? ¿Será ese el gran misterio?” 
         </p>
         <p class="story-p">
-          “Venga, <spam class="blue">${name}</spam>, no te entretengas. Tenemos que hacer un par de recados” te dice tu humano. 
-          Retomáis el paseo juntos.
+          “Venga, <spam class="blue">${name}</spam>, no te entretengas. Tenemos que hacer un par de recados” 
+          te dice tu humano.
         </p>
         <p class="story-p">
-          Caminando llegáis al quiosco. Últimamente tus humanos compran el periódico a diario, debe estar 
-          muy interesante, porque no se pierden uno.
+          Caminando llegáis al quiosco. Últimamente tus humanos compran el periódico a diario.
         </p>
-        <p class="story-p"> 
-          Tu te has aficionado también, y es que el crucigrama del “New DOG times” se ha convertido en 
-          tu pasión. Parece el de hoy es diferente…
-        </p>
-        <p>
-          ¿Esconderá otra pista? ¡Tendrás que resolverlo para encontrarla!
-        </p>        
+        <p> 
+          Tú te has aficionado también. El crucigrama del “New DOG times” se ha convertido en tu pasión. 
+          Parece el de hoy es diferente…¿Esconderá otra pista? ¡Tendrás que resolverlo para encontrarla!
+        </p>      
       </section>
+
+
 
       <section class="x-word">
         <input type="text" id="cell-1" class="input-letter cell-1" maxlength="1">
@@ -89,6 +87,25 @@ const game02HTML = (name) => `
         <input type="text" id="cell-62" class="input-letter cell-62" maxlength="1">
         <input type="text" id="cell-63" class="input-letter cell-63" maxlength="1">
         <input type="text" id="cell-64" class="input-letter cell-64" maxlength="1">
+      </section>
+
+      <section class="section-area">
+        <p class="blue">Palabras</p>
+        <div class="hints">
+          <ol>
+            <li>(Diminutivo) Parte del cuerpo que mueves enérgicamente cuando estás muy contento o llegan tus humanos a casa.</li>
+            <li>Órgano del olfato. Lo utilizas para olisquear culetes ajenos y todos los papis del barrio.</li>
+            <li>(Onomatopeya) Ladrido. </li>
+            <li>Órgano auditivo. Las levantas cuando escuchas algo que te llama la atención. Sobretodo si es sobre comida o sobre salir a la calle. </li>
+            <li>Te encanta ir a buscarla cuando te la lanzan. Devolverla… Ya es otra historia</li>
+            <li>(Verbo) En la cama con tus humanos, en el sofá o en tu propia camita. Sea donde sea, te encanta hacerlo a “pata suelta”.</li>            
+            <li>(Diminutivo) Tienes 4. Las dos delanteras sirven para pedir mimos, comida o atención a tus humanos</li>
+            <li>Pelos largos situados en el labio superior y sirven para orientarse. Tantos gatos como perretes los tenéis en el morro. </li>
+            <li>Órgano situado en el interior de la boca. Lo usas para beber, pero sobretodo, para dar muchos “besitos” a tus humanos. </li>
+            <li>En los perros los hay largos, cortos, rizados… Forman parte de los jerséis y la ropa de tus humanos de tanto achucharte. </li>
+            <li>(Verbo) Lo que te haces con tus patitas traseras cuando te entra un picor en el cuerpo. También te encanta que te lo hagan tus humanos. </li>
+          </ol>
+        </div>
       </section>
 
       <section class="section-area">

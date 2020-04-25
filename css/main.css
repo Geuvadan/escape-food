@@ -89,8 +89,9 @@
 
 .mosaic-cell {
   position: relative;
-  transition: transform 0.5s;
+  transition: 0.5s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   cursor: pointer;
 }
 
@@ -133,6 +134,12 @@
   -webkit-box-shadow: 5px -5px 10px 0px rgba(195, 182, 157, 0.75);
   -moz-box-shadow: 5px -5px 10px 0px rgba(195, 182, 157, 0.75);
   box-shadow: 5px -5px 10px 0px rgba(195, 182, 157, 0.75);
+}
+
+.hints {
+  font-size: 0.8rem;
+  text-align: left;
+  padding: 0 0.5rem;
 }
 
 .cell-1 {
