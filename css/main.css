@@ -27,7 +27,7 @@
 .game-container {
   height: 85vh;
   margin: auto;
-  padding: 1rem;
+  padding: 0.5rem;
   overflow: scroll;
 }
 

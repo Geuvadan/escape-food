@@ -1,10 +1,9 @@
 import storage from './storage.js';
 
-const { setItem, getItem } = storage('lStorage');
-
 const introHTML = `
     <div class="game-container">
       <section class="section-area">
+        <h3> España, primavera de 2020.</h3>
         <p>El sol se levanta como cada mañana y los primeros rayos de luz entran por la ventana de un piso en pleno centro de la ciudad.</p>
         <p>Parece un día como otro cualquiera. Nada hacía sospechar que ese día sería el comienzo de una gran aventura.</p>
         <p>Un misterio por resolver y un audaz protagonista: Tú.</p>
@@ -47,6 +46,7 @@ const introHTML = `
             </div>
           </fieldset>
           <button id="pjBtn" class="primary-btn" type="submit">Crear</button>
+          <p id="error" class="error hide">Asegurate de haber escrito un nombre y elegido un tamaño</p>
         </form>
       </section>
       
@@ -54,18 +54,23 @@ const introHTML = `
   `;
 
 const printIntro = () => {
+  const { setItem } = storage('lStorage');
   const mainContainer = document.getElementById('main');
   mainContainer.innerHTML = introHTML;
 
   const btn = document.getElementById('pjBtn');
   btn.addEventListener('click', (evt) => {
     evt.preventDefault();
-    const name = document.getElementById('nameInput').value;
-    const size = document.querySelector('input[name="size"]:checked').value;
-    setItem('name', name);
-    setItem('size', size);
-    console.log(name, size);
-    page('/game00');
+    const name = document.getElementById('nameInput');
+    const size = document.querySelector('input[name="size"]:checked');
+    if (name.value && size.value) {
+      setItem('name', name.value);
+      setItem('size', size.value);
+      page('/game00');
+    } else {
+      const err = document.querySelector('.error');
+      err.classList.remove('hide');
+    }
   });
 };
 

@@ -7,8 +7,8 @@ const homeHTML = `
         <img src="./img/home-subtitle.png" alt="En busca de la receta perfecta" />
       </section>
       <section class="home-call">
-        <h2><em>¿Serás capaz de resolverlo?</em></h2>
-        <a id="play-btn" class="primary-btn" href="/intro">jugar</a>
+        <h2 class="dark"><em>¿Serás capaz de resolverlo?</em></h2>
+        <button id="play-btn" class="primary-btn">jugar</button>
       </section>
     </div>
   `;
@@ -16,6 +16,12 @@ const homeHTML = `
 const printHome = () => {
   const mainContainer = document.getElementById('main');
   mainContainer.innerHTML = homeHTML;
+
+  const playBtn = document.getElementById('play-btn');
+  playBtn.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    page('/intro');
+  });
 };
 
 export default printHome;
