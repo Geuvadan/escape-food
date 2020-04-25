@@ -70,6 +70,25 @@
 }
 
 /*************************************
+    GAME01 - MOSAIC
+*************************************/
+.mosaic {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.mosaic-cell {
+  padding: 0 0.3rem;
+}
+
+.mosaic-cell img {
+  width: 100%;
+}
+
+/*************************************
     MEDIA QUERIES
 *************************************/
 
