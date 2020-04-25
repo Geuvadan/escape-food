@@ -80,12 +80,15 @@ const game01HTML = (name) => `
         <div class="mosaic-cell">
           <div class="mosaic-card mosaic-card-1"><img src="./img/mosaic/Foto-16-2.png" alt="imagen mosaico" /></div>
           <div class="mosaic-card mosaic-card-2"><img src="./img/mosaic/Foto-16.png" alt="imagen mosaico" /></div>
-        </div>
-        
+        </div>        
       </setion>
 
-  
-      
+      <section class="section-area">
+        <p> Solución: </p>
+        <input type="text" id="solution" class="solution-input blue" >
+        <p id="error" class="error hide">Ups! Parece que la respuesta no es correcta.</p>
+      </section>
+
       <section class="navigation">
         <button id="back-btn" class="primary-btn">Volver</button>
         <button id="next-btn" class="primary-btn">Siguiente</button>
@@ -107,9 +110,14 @@ const printGame01 = () => {
   });
 
   const nextBtn = document.getElementById('next-btn');
-  nextBtn.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    page('/game02');
+  nextBtn.addEventListener('click', () => {
+    const solution = document.getElementById('solution').value.toUpperCase();
+    if (solution === 'COMIDA CASERA') {
+      page('/game02');
+    } else {
+      const err = document.querySelector('.error');
+      err.classList.remove('hide');
+    }
   });
 
   const backBtn = document.getElementById('back-btn');
