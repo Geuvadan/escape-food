@@ -85,6 +85,7 @@
   justify-content: center;
   gap: 0.3rem;
   margin-bottom: 3rem;
+  perspective: 1500px;
 }
 
 .mosaic-cell {
@@ -92,21 +93,43 @@
   transition: 0.5s;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   cursor: pointer;
 }
 
 .mosaic-card-1 {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
 }
 
 .mosaic-card-2 {
   position: absolute;
   top: 0;
+	transform: rotateY(0deg);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
 }
 
 .is-flipped {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
 }
 
 .mosaic-cell img {
