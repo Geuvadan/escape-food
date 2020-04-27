@@ -35,7 +35,8 @@ label {
   text-align: left;
 }
 
-input[type='text'] {
+input[type='text'],
+input[type='number'] {
   display: block;
   width: 100%;
   line-height: 1.7rem;

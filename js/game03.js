@@ -3,18 +3,95 @@ import storage from './storage.js';
 const game03HTML = (name) => `
     <div class="game-container">
       <section class="section-area">
-        <h3>GAME 03</h3>
+        <h3>SUPERMERCADO</h3>
         <p class="story-p">
-          Game 03
+          Mientras celebras tu descubrimiento, empieza a llover. Por suerte, ya casi habéis 
+          llegado a la siguiente parada: El MercaDOGna, uno de los pocos sitios a los que 
+          últimamente van tus humanos.
         </p>
-        
+        <P>
+          “¡Ostras Perrin! ¡Se me ha mojado la lista! ¿Y ahora cómo hago la compra?” Oyes 
+          decir a tu humano. Con la lluvia, la lista de la compra se ha emborronado. Los 
+          ingredientes se pueden distinguir, pero las cantidades no quedan nada claras ¡Échale 
+          un vistazo a la lista, quizás tú puedas ayudarle!” 
+        </p>        
+      </section>
+      
+      <section class="supermarket">
+      
+        <div class="supermarket-list-img">
+          <img
+            srcset="./img/supermarket/ListaCompra-600w.png 545w, 
+                  ./img/supermarket/ListaCompra-1200w.png 1160w,
+                  ./img/supermarket/ListaCompra-1800w.png 1700w"
+            src="./img/supermarket/ListaCompra-1200w.png"
+            alt="supermarket list"
+          />
+        </div>
+
+        <section class="section-area">
+          <p> Solución: </p>
+          <p id="error" class="error hide">Ups! Parece que la respuesta no es correcta.</p>
+        </section>
+
+        <div class="supermarket-list-quantities">
+          <fieldset>
+            <label for="ing1">Carne de ternera</label>
+            <input type="number" min="0" max="99" maxlength="2" name="ing1" id="ing1" />
+            <span class="blue">,</span>
+            <input type="number" min="0" max="99" maxlength="2" name="ing1-dec" id="ing1-dec" />
+            <span class="blue">%</span>
+          </fieldset>
+          <fieldset>
+            <label for="ing2">Aceite</label>
+            <input type="number" min="0" max="99" maxlength="2" name="ing2" id="ing2" />
+            <span class="blue">,</span>
+            <input type="number" min="0" max="99" maxlength="2" name="ing2-dec" id="ing2-dec" />
+            <span class="blue">%</span>
+          </fieldset>
+          <fieldset>
+            <label for="ing3">Mazanas</label>
+            <input type="number" min="0" max="99" maxlength="2" name="ing3" id="ing3" />
+            <span class="blue">,</span>
+            <input type="number" min="0" max="99" maxlength="2" name="ing3-dec" id="ing3-dec" />
+            <span class="blue">%</span>
+          </fieldset>
+          <fieldset>
+            <label for="ing4">Zanahoria</label>
+            <input type="number" min="0" max="99" maxlength="2" name="ing4" id="ing4" />
+            <span class="blue">,</span>
+            <input type="number" min="0" max="99" maxlength="2" name="ing4-dec" id="ing4-dec" />
+            <span class="blue">%</span>
+          </fieldset>
+          <fieldset>
+            <label for="ing5">Espinacas</label>
+            <input type="number" min="0" max="99" maxlength="2" name="ing5" id="ing5" />
+            <span class="blue">,</span>
+            <input type="number" min="0" max="99" maxlength="2" name="ing5-dec" id="ing5-dec" />
+            <span class="blue">%</span>
+          </fieldset>
+          <fieldset>
+            <label for="ing6">Hígado de ternera</label>
+            <input type="number" min="0" max="99" maxlength="2" name="ing6" id="ing6" />
+            <span class="blue">,</span>
+            <input type="number" min="0" max="99" maxlength="2" name="ing6-dec" id="ing6-dec" />
+            <span class="blue">%</span>
+          </fieldset>
+          <fieldset>
+            <label for="ing7">Romero</label>
+            <input type="number" min="0" max="99" maxlength="2" name="ing7" id="ing7" />
+            <span class="blue">,</span>
+            <input type="number" min="0" max="99" maxlength="2" name="ing7-dec" id="ing7-dec" />
+            <span class="blue">%</span>
+          </fieldset>
+        </div>
       </section>
 
-      
       <section class="navigation">
         <button id="back-btn" class="primary-btn">Volver</button>
         <button id="next-btn" class="primary-btn">Siguiente</button>
       </section>
+      
     </div>
   `;
 
@@ -25,9 +102,18 @@ const printGame03 = () => {
   mainContainer.innerHTML = game03HTML(name);
 
   const nextBtn = document.getElementById('next-btn');
-  nextBtn.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    page('/game04');
+  nextBtn.addEventListener('click', () => {
+    const inputArr = document.querySelectorAll('input[type="number"]');
+    let valueArr = [];
+    inputArr.forEach((elem) => valueArr.push(parseInt(elem.value)));
+    const total = valueArr.reduce((a, b) => a + b);
+
+    if (total === 103) {
+      page('/game04');
+    } else {
+      const err = document.querySelector('.error');
+      err.classList.remove('hide');
+    }
   });
 
   const backBtn = document.getElementById('back-btn');
