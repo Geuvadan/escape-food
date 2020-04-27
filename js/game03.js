@@ -17,9 +17,8 @@ const game03HTML = (name) => `
         </p>        
       </section>
       
-      <section class="supermarket">
-      
-        <div class="supermarket-list-img">
+      <section class="section-area">      
+        <div class="section-img">
           <img
             srcset="./img/supermarket/ListaCompra-600w.png 545w, 
                   ./img/supermarket/ListaCompra-1200w.png 1160w,
@@ -29,10 +28,10 @@ const game03HTML = (name) => `
           />
         </div>
 
-        <section class="section-area">
+        <div class="story-div">
           <p> Solución: </p>
           <p id="error" class="error hide">Ups! Parece que la respuesta no es correcta.</p>
-        </section>
+        </div>
 
         <div class="supermarket-list-quantities">
           <fieldset>
