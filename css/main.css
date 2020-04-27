@@ -136,7 +136,7 @@
   box-shadow: 5px -5px 10px 0px rgba(195, 182, 157, 0.75);
 }
 
-.hints {
+.x-word-hints {
   font-size: 0.8rem;
   text-align: left;
   padding: 0 0.5rem;
@@ -400,6 +400,32 @@
 }
 
 /*************************************
+    GAME03 - SUPERMARKET
+*************************************/
+.supermarket {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.supermarket-list-img > img {
+  width: 100%;
+}
+.supermarket-list-quantities {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.supermarket-list-quantities label {
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+  padding-right: 2rem;
+}
+.supermarket-list-quantities input {
+  display: inline-block;
+  width: 15%;
+}
+
+/*************************************
     MEDIA QUERIES
 *************************************/
 
@@ -433,6 +459,10 @@
 
   .size-radio {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .supermarket-list-quantities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

@@ -91,7 +91,7 @@ const game02HTML = (name) => `
 
       <section class="section-area">
         <p class="blue">Palabras</p>
-        <div class="hints">
+        <div class="x-word-hints">
           <ol>
             <li>(Diminutivo) Parte del cuerpo que mueves enérgicamente cuando estás muy contento o llegan tus humanos a casa.</li>
             <li>Órgano del olfato. Lo utilizas para olisquear culetes ajenos y todos los papis del barrio.</li>
