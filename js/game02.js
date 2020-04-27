@@ -23,6 +23,17 @@ const game02HTML = (name) => `
 
 
       <section class="x-word">
+        <label id=="word-1" class="word-1 word">1.</label>
+        <label id=="word-2" class="word-2 word">2.</label>
+        <label id=="word-3" class="word-3 word">3.</label>
+        <label id=="word-4" class="word-4 word">4.</label>
+        <label id=="word-5" class="word-5 word">5.</label>
+        <label id=="word-6" class="word-6 word">6.</label>
+        <label id=="word-7" class="word-7 word">7.</label>
+        <label id=="word-8" class="word-8 word">8.</label>
+        <label id=="word-9" class="word-9 word">9.</label>
+        <label id=="word-10" class="word-10 word">10.</label>
+        <label id=="word-11" class="word-11 word">11.</label>
         <input type="text" id="cell-1" class="input-letter cell-1" maxlength="1">
         <input type="text" id="cell-2" class="input-letter cell-2" maxlength="1">
         <input type="text" id="cell-3" class="input-letter cell-3" maxlength="1">

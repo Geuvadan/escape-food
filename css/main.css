@@ -147,6 +147,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem 2rem;
   justify-content: center;
+  align-items: center;
   row-gap: 0.3rem;
   margin-bottom: 3rem;
 }
@@ -166,6 +167,55 @@
   font-size: 0.8rem;
   text-align: left;
   padding: 0 0.5rem;
+}
+.x-word > .word {
+  text-align: right;
+  padding: 0 0.5rem;
+}
+
+.word-1 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+.word-2 {
+  grid-column-start: 5;
+  grid-row-start: 2;
+}
+.word-3 {
+  grid-column-start: 5;
+  grid-row-start: 3;
+}
+.word-4 {
+  grid-column-start: 4;
+  grid-row-start: 4;
+}
+.word-5 {
+  grid-column-start: 4;
+  grid-row-start: 5;
+}
+.word-6 {
+  grid-column-start: 5;
+  grid-row-start: 6;
+}
+.word-7 {
+  grid-column-start: 2;
+  grid-row-start: 7;
+}
+.word-8 {
+  grid-column-start: 8;
+  grid-row-start: 8;
+}
+.word-9 {
+  grid-column-start: 3;
+  grid-row-start: 9;
+}
+.word-10 {
+  grid-column-start: 4;
+  grid-row-start: 11;
+}
+.word-11 {
+  grid-column-start: 3;
+  grid-row-start: 12;
 }
 
 .cell-1 {

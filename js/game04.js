@@ -103,7 +103,6 @@ const printGame04 = () => {
 
   const nextBtn = document.getElementById('next-btn');
   nextBtn.addEventListener('click', () => {
-    console.log(code);
     if (code.join('-') === 'bano-dormitorio-gym-salon') {
       page('/game05');
     } else {
