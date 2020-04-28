@@ -6,6 +6,7 @@ import printGame02 from './game02.js';
 import printGame03 from './game03.js';
 import printGame04 from './game04.js';
 import printGame05 from './game05.js';
+import notFound from './notFound.js';
 
 page('/', () => {
   printHome();
@@ -37,6 +38,10 @@ page('/game04', () => {
 
 page('/game05', () => {
   printGame05();
+});
+
+page('/*', () => {
+  notFound();
 });
 
 page();

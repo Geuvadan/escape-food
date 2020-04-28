@@ -2,6 +2,9 @@ import storage from './storage.js';
 
 const game00HTML = (name) => `
     <div class="game-container">
+      <div class="section-img">
+        <img src="./img/home-subtitle.png" alt="En busca de la receta perfecta" />
+      </div>
       <section class="section-area">
         <p class="story-p">
           Estás desayunando en casa con tu familia humana. Últimamente pasan mucho más tiempo en casa, 
@@ -45,8 +48,7 @@ const printGame00 = () => {
   mainContainer.innerHTML = game00HTML(name);
 
   const nextBtn = document.getElementById('next-btn');
-  nextBtn.addEventListener('click', (evt) => {
-    evt.preventDefault();
+  nextBtn.addEventListener('click', () => {
     page('/game01');
   });
 
