@@ -93,6 +93,58 @@ const game01HTML = (name) => `
         <button id="back-btn" class="primary-btn">Volver</button>
         <button id="next-btn" class="primary-btn">Siguiente</button>
       </section>
+
+      <div class="accordionWrapper">
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 1</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              En todas las imágenes hay perros, pero algunos parece que no comen muy sano (ni muy rico). 
+              Pulsa las que no cuadran y encuentra la respuesta.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 2</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Las verduras y frutas son muy sanas, esas bolitas marrones no parecen igual de 
+              saludables.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 3</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Pulsando cada imagen encontrarás un código, parece que ordenándolas por números, 
+              forman dos palabras.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 4</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Los números te darán la posición de cada par de letras. Las letras son las sílabas 
+              que forman las palabras.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 5</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Ordena cada código de las imágenes que no encajan. los números te darán la posición. 
+              Al escribir las letras en el orden correcto, obtendrás la respuesta
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   `;
 
@@ -123,6 +175,25 @@ const printGame01 = () => {
 
   const backBtn = document.getElementById('back-btn');
   backBtn.addEventListener('click', () => window.history.back());
+
+  /**
+   * CLUES
+   */
+
+  const accItem = document.getElementsByClassName('accordionItem');
+  const accHD = document.getElementsByClassName('accordionItemHeading');
+  for (let i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+  }
+  function toggleItem() {
+    const itemClass = this.parentNode.className;
+    for (let i = 0; i < accItem.length; i++) {
+      accItem[i].className = 'accordionItem close';
+    }
+    if (itemClass == 'accordionItem close') {
+      this.parentNode.className = 'accordionItem open';
+    }
+  }
 };
 
 export default printGame01;

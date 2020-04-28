@@ -90,6 +90,49 @@ const game03HTML = (name) => `
         <button id="back-btn" class="primary-btn">Volver</button>
         <button id="next-btn" class="primary-btn">Siguiente</button>
       </section>
+
+      <div class="accordionWrapper">
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 1</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Parece que algunas letras de los ingredientes esconden un mensaje. ¿Será una pista para
+              encontrar las cantidades?
+            </p>
+          </div>
+        </div>
+
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 2</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Puede que el mensaje oculto que había en la lista te ayude a dar con las cantidades de los
+              ingredientes. ¿Has probado a buscarlo en google?
+            </p>
+          </div>
+        </div>
+
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 3</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Seguro que en la web de
+              <a href="http://www.frankietheking.com" target="_blank">www.frankietheking.com</a> pueden echarte una pata
+              con las recetas, sus ingredientes y proporciones.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 4</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Los ingredientes parece que son para cocinar la receta de ternera, seguro que ahí encuentras
+              las proporciones correctas.
+            </p>
+          </div>
+        </div>
+      </div>
       
     </div>
   `;
@@ -118,6 +161,25 @@ const printGame03 = () => {
 
   const backBtn = document.getElementById('back-btn');
   backBtn.addEventListener('click', () => window.history.back());
+
+  /**
+   * CLUES
+   */
+
+  const accItem = document.getElementsByClassName('accordionItem');
+  const accHD = document.getElementsByClassName('accordionItemHeading');
+  for (let i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+  }
+  function toggleItem() {
+    const itemClass = this.parentNode.className;
+    for (let i = 0; i < accItem.length; i++) {
+      accItem[i].className = 'accordionItem close';
+    }
+    if (itemClass == 'accordionItem close') {
+      this.parentNode.className = 'accordionItem open';
+    }
+  }
 };
 
 export default printGame03;

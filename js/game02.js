@@ -130,6 +130,28 @@ const game02HTML = (name) => `
         <button id="back-btn" class="primary-btn">Volver</button>
         <button id="next-btn" class="primary-btn">Siguiente</button>
       </section>
+
+      <div class="accordionWrapper">
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 1</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Soluciones: 1. COLITA 2. NARIZ 3. GUAU-GUAU 4. OREJAS 5. PELOTA 6. DORMIR 7. PATITAS 8.
+              BIGOTES 9. LENGUA 10. PELOS 11.RASCAR
+            </p>
+          </div>
+        </div>
+
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 2</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Parece que las respuestas de tu crucigrama forman una palabra. Aún le falta una leTra, pero
+              si la completas, podría ser la solución.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   `;
 
@@ -153,6 +175,25 @@ const printGame02 = () => {
 
   const backBtn = document.getElementById('back-btn');
   backBtn.addEventListener('click', () => window.history.back());
+
+  /**
+   * CLUES
+   */
+
+  const accItem = document.getElementsByClassName('accordionItem');
+  const accHD = document.getElementsByClassName('accordionItemHeading');
+  for (let i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+  }
+  function toggleItem() {
+    const itemClass = this.parentNode.className;
+    for (let i = 0; i < accItem.length; i++) {
+      accItem[i].className = 'accordionItem close';
+    }
+    if (itemClass == 'accordionItem close') {
+      this.parentNode.className = 'accordionItem open';
+    }
+  }
 };
 
 export default printGame02;

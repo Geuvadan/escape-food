@@ -65,6 +65,53 @@ const game04HTML = (name) => `
         <button id="back-btn" class="primary-btn">Volver</button>
         <button id="next-btn" class="primary-btn">Siguiente</button>
       </section>
+
+      <div class="accordionWrapper">
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 1</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Si se llama “Rutina Frankie” seguramente el tal Frankie tendrá un perfil en Instagram.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 2</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              En el perfil de
+              <a href="https://www.instagram.com/frankiefordogs/?hl=es" target="_blank"
+                >@frankiefordogs</a
+              >
+              en Instagram podrás ver exactamente el recorrido de la “Rutina Frankie”.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 3</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Parece que en el perfil de
+              <a href="https://www.instagram.com/frankiefordogs/?hl=es" target="_blank"
+                >@frankiefordogs</a
+              >
+              hay unas cuantas historias destacadas. ¿Las has visto?
+            </p>
+          </div>
+        </div>
+
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 4</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Coloca los símbolos en el orden que sigue la “Rutina Frankie”en las stories de Instagram. Ya
+              casi tienes la clave.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   `;
 
@@ -114,6 +161,25 @@ const printGame04 = () => {
 
   const backBtn = document.getElementById('back-btn');
   backBtn.addEventListener('click', () => window.history.back());
+
+  /**
+   * CLUES
+   */
+
+  const accItem = document.getElementsByClassName('accordionItem');
+  const accHD = document.getElementsByClassName('accordionItemHeading');
+  for (let i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+  }
+  function toggleItem() {
+    const itemClass = this.parentNode.className;
+    for (let i = 0; i < accItem.length; i++) {
+      accItem[i].className = 'accordionItem close';
+    }
+    if (itemClass == 'accordionItem close') {
+      this.parentNode.className = 'accordionItem open';
+    }
+  }
 };
 
 export default printGame04;

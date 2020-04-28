@@ -57,6 +57,37 @@ const game05HTML = (name) => `
         <button id="back-btn" class="primary-btn">Volver</button>
         <button id="next-btn" class="primary-btn">Siguiente</button>
       </section>
+
+      <div class="accordionWrapper">
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 1</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Parece un día de confinamiento como otro cualquiera. ¿Qué hacen los humanos a las 20.00h
+              cada día desde entonces?
+            </p>
+          </div>
+        </div>
+
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 2</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              Escuchas ruidos fuertes “clap-clap-clap”, parecen aplausos. ¿Dónde te estará esperando tu
+              humano?
+            </p>
+          </div>
+        </div>
+
+        <div class="accordionItem close">
+          <h5 class="accordionItemHeading">Pista 3</h5>
+          <div class="accordionItemContent">
+            <p class="clue-text">
+              ¿Recuerdas el plano de tu casa? Seguro que recuerdas que tenías una buena terraza o…
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   `;
 
@@ -87,6 +118,25 @@ const printGame05 = () => {
 
   const backBtn = document.getElementById('back-btn');
   backBtn.addEventListener('click', () => window.history.back());
+
+  /**
+   * CLUES
+   */
+
+  const accItem = document.getElementsByClassName('accordionItem');
+  const accHD = document.getElementsByClassName('accordionItemHeading');
+  for (let i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+  }
+  function toggleItem() {
+    const itemClass = this.parentNode.className;
+    for (let i = 0; i < accItem.length; i++) {
+      accItem[i].className = 'accordionItem close';
+    }
+    if (itemClass == 'accordionItem close') {
+      this.parentNode.className = 'accordionItem open';
+    }
+  }
 };
 
 export default printGame05;
