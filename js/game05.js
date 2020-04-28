@@ -39,7 +39,7 @@ const game05HTML = (name) => `
       <section class="section-area">
         <h3>¿Dónde te espera tu humano a las 20:00h?</h3>
         <p>En el... </p>
-        <div class="word">
+        <div class="final-word">
           <input type="text" id="cell-1" class="input-letter" maxlength="1">
           <input type="text" id="cell-2" class="input-letter" maxlength="1">
           <input type="text" id="cell-3" class="input-letter" maxlength="1">

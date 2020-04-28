@@ -20,6 +20,10 @@
   justify-content: center;
 }
 
+.play-btn {
+  margin: auto;
+}
+
 /*************************************
     COMMON GAME
 *************************************/
@@ -527,7 +531,7 @@
     MEDIA QUERIES
 *************************************/
 
-.word {
+.final-word {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0.3rem;
@@ -539,7 +543,7 @@
   text-align: center;
 }
 
-.word > .input-letter {
+.final-word > .input-letter {
   background-color: #f3f1ee;
   font-size: 0.9rem;
   line-height: 1rem;

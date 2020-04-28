@@ -8,7 +8,7 @@ const homeHTML = `
       </section>
       <section class="home-call">
         <h2 class="dark"><em>¿Serás capaz de resolverlo?</em></h2>
-        <button id="play-btn" class="primary-btn">jugar</button>
+        <button id="play-btn" class="primary-btn play-btn">jugar</button>
       </section>
     </div>
   `;
