@@ -12,7 +12,7 @@ const game05HTML = (name) => `
             srcset="./img/antes-de-cenar/CajaFrankie-600w.png 600w, 
                   ./img/antes-de-cenar/CajaFrankie-1200w.png 1200w,
                   ./img/antes-de-cenar/CajaFrankie-1800w.png 1800w"
-            src="./img/vuelta-a-casa/PlanoSimbolos-1200w.png"
+            src="./img/antes-de-cenar/CajaFrankie-1200w.png"
             alt="vuelta a casa list"
           />
         </div>
@@ -78,7 +78,7 @@ const printGame05 = () => {
       letters.join('').toUpperCase() === 'BALCON' ||
       letters.join('').toUpperCase() === 'BALCÓN'
     ) {
-      page('/end');
+      page('/game-end');
     } else {
       const err = document.querySelector('.error');
       err.classList.remove('hide');
