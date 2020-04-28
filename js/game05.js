@@ -61,7 +61,7 @@ const game05HTML = (name) => `
   `;
 
 const printGame05 = () => {
-  const { getItem } = storage('lStorage');
+  const { getItem, setItem } = storage('lStorage');
   const name = getItem('name');
   const mainContainer = document.getElementById('main');
   mainContainer.innerHTML = game05HTML(name);
@@ -73,11 +73,11 @@ const printGame05 = () => {
     inputs.forEach((letter) => {
       letters.push(letter.value);
     });
-    console.log(letters);
     if (
       letters.join('').toUpperCase() === 'BALCON' ||
       letters.join('').toUpperCase() === 'BALCÓN'
     ) {
+      setItem('Game05', true);
       page('/game-end');
     } else {
       const err = document.querySelector('.error');

@@ -4,6 +4,7 @@ const game00HTML = (name) => `
     <div class="game-container">
       <div class="section-img">
         <img src="./img/home-subtitle.png" alt="En busca de la receta perfecta" />
+        <h3>${name}</h3>
       </div>
       <section class="section-area">
         <p class="story-p">

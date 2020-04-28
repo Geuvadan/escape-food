@@ -134,7 +134,7 @@ const game02HTML = (name) => `
   `;
 
 const printGame02 = () => {
-  const { getItem } = storage('lStorage');
+  const { getItem, setItem } = storage('lStorage');
   const name = getItem('name');
   const mainContainer = document.getElementById('main');
   mainContainer.innerHTML = game02HTML(name);
@@ -143,6 +143,7 @@ const printGame02 = () => {
   nextBtn.addEventListener('click', () => {
     const solution = document.getElementById('solution').value.toUpperCase();
     if (solution === 'INGREDIENTES') {
+      setItem('Game02', true);
       page('/game03');
     } else {
       const err = document.querySelector('.error');

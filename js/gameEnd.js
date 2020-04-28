@@ -39,24 +39,22 @@ const gameEndHTML = (name) => `
       </section>
       <section class="navigation">
         
-        <button id="next-btn" class="primary-btn want-price-btn">Quiero mi premio!</button>
+        <button id="next-btn" class="primary-btn long-btn">Quiero mi premio!</button>
       </section>
     </div>
   `;
 
 const printGameEnd = () => {
-  const { getItem } = storage('lStorage');
+  const { getItem, setItem } = storage('lStorage');
   const name = getItem('name');
   const mainContainer = document.getElementById('main');
   mainContainer.innerHTML = gameEndHTML(name);
 
   const nextBtn = document.getElementById('next-btn');
   nextBtn.addEventListener('click', () => {
+    setItem('GetPrize', true);
     page('/premio');
   });
-
-  const backBtn = document.getElementById('back-btn');
-  backBtn.addEventListener('click', () => window.history.back());
 };
 
 export default printGameEnd;

@@ -95,7 +95,7 @@ const game03HTML = (name) => `
   `;
 
 const printGame03 = () => {
-  const { getItem } = storage('lStorage');
+  const { getItem, setItem } = storage('lStorage');
   const name = getItem('name');
   const mainContainer = document.getElementById('main');
   mainContainer.innerHTML = game03HTML(name);
@@ -108,6 +108,7 @@ const printGame03 = () => {
     const total = valueArr.reduce((a, b) => a + b);
 
     if (total === 103) {
+      setItem('Game03', true);
       page('/game04');
     } else {
       const err = document.querySelector('.error');

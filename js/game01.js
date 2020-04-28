@@ -97,7 +97,7 @@ const game01HTML = (name) => `
   `;
 
 const printGame01 = () => {
-  const { getItem } = storage('lStorage');
+  const { getItem, setItem } = storage('lStorage');
   const name = getItem('name');
   const mainContainer = document.getElementById('main');
   mainContainer.innerHTML = game01HTML(name);
@@ -113,6 +113,7 @@ const printGame01 = () => {
   nextBtn.addEventListener('click', () => {
     const solution = document.getElementById('solution').value.toUpperCase();
     if (solution === 'COMIDA CASERA') {
+      setItem('Game01', true);
       page('/game02');
     } else {
       const err = document.querySelector('.error');

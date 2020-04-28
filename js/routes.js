@@ -7,7 +7,10 @@ import printGame03 from './game03.js';
 import printGame04 from './game04.js';
 import printGame05 from './game05.js';
 import printGameEnd from './gameEnd.js';
+import printPrize from './prize.js';
+import printCheat from './cheat.js';
 import notFound from './notFound.js';
+import storage from './storage.js';
 
 page('/', () => {
   printHome();
@@ -26,23 +29,33 @@ page('/game01', () => {
 });
 
 page('/game02', () => {
-  printGame02();
+  const { getItem } = storage('lStorage');
+  getItem('Game01') ? printGame02() : printCheat();
 });
 
 page('/game03', () => {
-  printGame03();
+  const { getItem } = storage('lStorage');
+  getItem('Game02') ? printGame03() : printCheat();
 });
 
 page('/game04', () => {
-  printGame04();
+  const { getItem } = storage('lStorage');
+  getItem('Game03') ? printGame04() : printCheat();
 });
 
 page('/game05', () => {
-  printGame05();
+  const { getItem } = storage('lStorage');
+  getItem('Game04') ? printGame05() : printCheat();
 });
 
 page('/game-end', () => {
-  printGameEnd();
+  const { getItem } = storage('lStorage');
+  getItem('Game05') ? printGameEnd() : printCheat();
+});
+
+page('/premio', () => {
+  const { getItem } = storage('lStorage');
+  getItem('GetPrize') ? printPrize() : printCheat();
 });
 
 page('/*', () => {
