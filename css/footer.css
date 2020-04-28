@@ -1,7 +1,19 @@
 .footer {
   height: 5vh;
   background-color: #222222;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   width: 100%;
+  text-align: center;
+  color: lightgrey;
+  font-size: 0.8rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+.footer a:hover {
+  color: grey;
 }
