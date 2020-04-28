@@ -20,7 +20,7 @@ const priceHTML = (name) => `
       </div>
 
       <div class="navigation-prize">
-        <a href="https://frankietheking.com/wizard/" target="_blank" id="frankie-btn" class="primary-btn long-btn">¡Lo quiero!</a>
+        <a href="https://frankietheking.com/wizard/" target="_blank" id="frankie-btn" class="primary-btn block-btn">¡Lo quiero!</a>
       </div>
 
       <div class="prize-pdf">
@@ -30,7 +30,7 @@ const priceHTML = (name) => `
         </div>
 
         <div class="navigation-prize">
-          <a href="../RecetarioFrankie.pdf" target="_blank" id="download-btn" class="primary-btn long-btn">DESCARGAR PDF</a>
+          <a href="../RecetarioFrankie.pdf" target="_blank" id="download-btn" class="primary-btn block-btn">DESCARGAR PDF</a>
         </div>
 
         <div class="prize-pdf-img">

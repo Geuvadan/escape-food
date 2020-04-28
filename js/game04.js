@@ -55,7 +55,7 @@ const game04HTML = (name) => `
           <div class="code-space code-4"></div>
 
         </div>
-        <button id="reset-btn" class="primary-btn long-btn">Restaurar</button>
+        <button id="reset-btn" class="primary-btn block-btn">Restaurar</button>
         <div class="story-div">
           <p id="error" class="error hide">Ups! Parece que la respuesta no es correcta.</p>
         </div>

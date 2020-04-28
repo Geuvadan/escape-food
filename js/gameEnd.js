@@ -39,7 +39,7 @@ const gameEndHTML = (name) => `
       </section>
       <section class="navigation">
         
-        <button id="next-btn" class="primary-btn long-btn">Quiero mi premio!</button>
+        <button id="next-btn" class="primary-btn block-btn">Quiero mi premio!</button>
       </section>
     </div>
   `;
