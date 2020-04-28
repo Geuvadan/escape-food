@@ -563,6 +563,63 @@
 }
 
 /*************************************
+    PRIZE
+*************************************/
+
+.prize-h3 {
+  display: block;
+  background-color: #2ca6c3;
+  color: white;
+  padding: 1rem;
+}
+
+.prize-frankie {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.prize-frankie-img {
+  max-width: 350px;
+  margin: auto;
+}
+
+.prize-frankie-text {
+  display: grid;
+  justify-content: center;
+  align-content: space-around;
+  align-self: stretch;
+  font-size: 1.1rem;
+  background-color: white;
+  padding: 1rem;
+}
+
+.prize-frankie-img img {
+  width: 100%;
+}
+
+.prize-pdf {
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.prize-pdf-img img {
+  width: 100%;
+  position: relative;
+}
+
+.cta-red {
+  background-color: #ff7282;
+}
+
+.navigation-prize {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*************************************
     MEDIA QUERIES
 *************************************/
 
@@ -586,6 +643,20 @@
   .x-word > .input-letter {
     width: 2.5rem;
     font-size: 1rem;
+  }
+
+  .prize-frankie {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .prize-frankie-img {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+
+  .prize-frankie-text {
+    grid-column-start: 1;
+    grid-row-start: 1;
   }
 }
 
