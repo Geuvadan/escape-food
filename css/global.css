@@ -59,7 +59,7 @@ input[type='number'] {
   color: white;
   line-height: 1.7rem;
   padding: 0.3rem 1rem;
-
+  width: 8rem;
   border: 0px;
   cursor: pointer;
 }

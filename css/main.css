@@ -527,6 +527,33 @@
     MEDIA QUERIES
 *************************************/
 
+.word {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.3rem;
+  margin: 2rem auto;
+  width: 15rem;
+  text-align: center;
+}
+
+.word > .input-letter {
+  background-color: #f3f1ee;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-box-shadow: 5px -5px 10px 0px rgba(195, 182, 157, 0.75);
+  -moz-box-shadow: 5px -5px 10px 0px rgba(195, 182, 157, 0.75);
+  box-shadow: 5px -5px 10px 0px rgba(195, 182, 157, 0.75);
+}
+
+/*************************************
+    MEDIA QUERIES
+*************************************/
+
 @media all and (min-width: 480px) {
   .home-container img {
     max-width: 80%;
