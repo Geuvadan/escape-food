@@ -11,7 +11,7 @@ const introHTML = `
       </section>
       <section class="section-area form-section">
         <h3>Crea tu personaje</h3>
-        <form>
+        <form class="btn-margin">
           <fieldset>
             <label for="name">Nombre de tu perro</label>
             <input type="text" name="name" id="nameInput" placeholder="Frankie" required/>

@@ -74,7 +74,7 @@ input[type='number'] {
 }
 
 .navigation {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   display: flex;
   justify-content: space-around;
 }
@@ -114,4 +114,8 @@ input[type='number'] {
 
 .story-div {
   margin-bottom: 1rem;
+}
+
+.btn-margin {
+  margin-bottom: 60px;
 }

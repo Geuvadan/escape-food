@@ -2,6 +2,7 @@
   padding: 0.5rem;
   background: #fff;
   width: 100%;
+  margin-bottom: 5vh;
 }
 .accordionItem {
   display: block;
