@@ -6,7 +6,7 @@
   padding: 1rem;
   background-color: #fff;
   width: 100%;
-  height: calc(95vh - 80px);
+  height: calc(95vh);
   overflow: scroll;
 }
 

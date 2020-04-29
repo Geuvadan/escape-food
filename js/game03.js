@@ -30,7 +30,6 @@ const game03HTML = (name) => `
 
         <div class="story-div">
           <p> Solución: </p>
-          <p id="error" class="error hide">Ups! Parece que la respuesta no es correcta.</p>
         </div>
 
         <div class="supermarket-list-quantities">
@@ -84,6 +83,9 @@ const game03HTML = (name) => `
             <span class="blue">%</span>
           </fieldset>
         </div>
+
+        <p id="error" class="error hide">Ups! Parece que la respuesta no es correcta.</p>
+        
       </section>
 
       <section class="navigation">

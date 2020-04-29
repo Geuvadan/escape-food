@@ -45,8 +45,10 @@ const introHTML = `
               </div>
             </div>
           </fieldset>
+
+          <p id="error" class="error hide btn-margin-2rem">Asegurate de haber escrito un nombre y elegido un tamaño</p>
           <button id="pjBtn" class="primary-btn" type="submit">Crear</button>
-          <p id="error" class="error hide">Asegurate de haber escrito un nombre y elegido un tamaño</p>
+          
         </form>
       </section>
       
@@ -63,7 +65,7 @@ const printIntro = () => {
     evt.preventDefault();
     const name = document.getElementById('nameInput');
     const size = document.querySelector('input[name="size"]:checked');
-    if (name.value && size.value) {
+    if (name.value && size) {
       setItem('name', name.value);
       setItem('size', size.value);
       page('/game00');

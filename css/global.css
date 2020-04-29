@@ -44,7 +44,7 @@ input[type='number'] {
   box-shadow: none;
   border-radius: 5px;
   border: 1px solid #d1dbe0;
-  padding: 0.5rem;
+  padding: 0.3rem;
   font-size: 1.2rem;
 }
 
@@ -118,4 +118,8 @@ input[type='number'] {
 
 .btn-margin {
   margin-bottom: 60px;
+}
+
+.btn-margin-2rem {
+  margin-bottom: 2rem;
 }
